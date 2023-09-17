@@ -17,8 +17,8 @@ blueprint:
       description: "State whicht triggers notification"
       default: 'on'
             
-    for_time_m:
-      name: For Time Minutes
+    for_time_s:
+      name: For Time Seconds
       description: Duration the sensor must be in state
       default: 0
       selector:
@@ -83,7 +83,7 @@ blueprint:
           max: 30
           step: 1
           mode: slider
-          unit_of_measurement: min
+          unit_of_measurement: sec
           
     stop_button_text:
       name: "Stop button text"
@@ -100,15 +100,15 @@ variables:
   action_prefix: "STOP_{{this.entity_id}}"
   
 trigger_variables:
-  for_time_m: !input for_time_m
-  for_time_m_t: "{{ for_time_m | default(0) | int  }}"
+  for_time_s: !input for_time_s
+  for_time_s_t: "{{ for_time_s | default(0) | int  }}"
 
 trigger:
 - platform: state
   entity_id: !input 'sensor_entity'
   to: !input active_state
   for:
-    minutes: "{{ for_time_m_t }}"
+    seconds: "{{ for_time_s_t }}"
   id: 'on'
 - platform: state
   entity_id: !input 'sensor_entity'
