@@ -75,7 +75,7 @@ blueprint:
           max: 30
           step: 1
           mode: slider
-          unit_of_measurement: sec
+          unit_of_measurement: min
           
     stop_button_text:
       name: "Stop button text"
