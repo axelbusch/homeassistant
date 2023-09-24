@@ -153,7 +153,6 @@ action:
             data:
               ttl: 0
               priority: high
-              notification_icon: !input 'status_bar_icon'
               tag: "{{ tag }}"
               persistent: !input persistent_notification
               sticky: !input persistent_notification
@@ -168,7 +167,6 @@ action:
             data:
               ttl: 0
               priority: high
-              notification_icon: !input 'status_bar_icon'
               tag: "{{ tag }}"
               persistent: !input persistent_notification
               sticky: !input persistent_notification
@@ -187,7 +185,6 @@ action:
             data:
               ttl: 0
               priority: high
-              notification_icon: !input 'status_bar_icon'
               tag: "{{ tag }}"
               persistent: !input persistent_notification
               sticky: !input persistent_notification
@@ -202,7 +199,6 @@ action:
             data:
               ttl: 0
               priority: high
-              notification_icon: !input 'status_bar_icon'
               tag: "{{ tag }}"
               persistent: !input persistent_notification
               sticky: !input persistent_notification
