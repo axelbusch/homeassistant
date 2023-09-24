@@ -51,14 +51,6 @@ blueprint:
       description: "Notification message"
       default: "Keep in mind: {{ entity_name }} is {{ active_state }}"
       
-    status_bar_icon:
-      name: "Status bar icon"
-      description: "Sets the status bar icon. (Android only)"
-      default: mdi:home-assistant
-      selector:
-        icon:
-          placeholder: mdi:home-assistant
-
     ha_notification:
       name: Persistent HomeAssistant Notification
       description: Creates an notification in your home assistant frontend.
