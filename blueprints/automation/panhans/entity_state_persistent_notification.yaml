@@ -150,26 +150,11 @@ action:
           data:
             title: !input title
             message: !input message
-            data:
-              ttl: 0
-              priority: high
-              tag: "{{ tag }}"
-              persistent: !input persistent_notification
-              sticky: !input persistent_notification
-              actions:
-              - action: "{{ action_tag }}"
-                title: !input stop_button_text
         else:
         - service: 'notify.mobile_app_{{ device_attr(notify_device, "name") | slugify }}'
           data:
             title: !input title
             message: !input message
-            data:
-              ttl: 0
-              priority: high
-              tag: "{{ tag }}"
-              persistent: !input persistent_notification
-              sticky: !input persistent_notification
     - if:
         - condition: template
           value_template: "{{ group_target is defined and group_target != '' }}"
@@ -182,26 +167,11 @@ action:
           data:
             title: !input title
             message: !input message
-            data:
-              ttl: 0
-              priority: high
-              tag: "{{ tag }}"
-              persistent: !input persistent_notification
-              sticky: !input persistent_notification
-              actions:
-              - action: "{{ action_tag }}"
-                title: !input stop_button_text
         else:
         - service: notify.{{ group_target }}
           data:
             title: !input title
             message: !input message
-            data:
-              ttl: 0
-              priority: high
-              tag: "{{ tag }}"
-              persistent: !input persistent_notification
-              sticky: !input persistent_notification
     - if:
         - condition: template
           value_template: "{{ ha_notification }}"
